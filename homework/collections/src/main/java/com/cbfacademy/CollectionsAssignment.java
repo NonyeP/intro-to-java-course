@@ -16,40 +16,45 @@ import java.util.stream.Collectors;
 
 public class CollectionsAssignment {
     public static void main(String[] args) {
-         Integer[] a = new Integer[]{213, 54, 91, 187, 2001, 2023}; //[Fizz, Fizz, 91, 187, Fizz, 2023];
-            List<Integer> numbers = Arrays.asList(a);
-            List<Integer> b = new ArrayList<>();
-            b.add(1);
-            b.add(2);
-            b.add(4);
-            b.add(8);
-            b.add(11);
-            b.add(13);
-            b.add(17);
+        Integer[] a = new Integer[]{213, 54, 91, 187, 2001, 2023}; //[Fizz, Fizz, 91, 187, Fizz, 2023];
+        String[] a1 = new String[]{"Apple","Boy","Cat","Boy","Cat","Boy"};
+        String[] a2 = new String[]{};
+        List<Integer> numbers = Arrays.asList(a);
+        List<Integer> b = new ArrayList<>();
+        b.add(1);
+        b.add(2);
+        b.add(4);
+        b.add(8);
+        b.add(11);
+        b.add(13);
+        b.add(17);
+        List<String> names = Arrays.asList(a1);
+        List<String> names2 = Arrays.asList(a2);
 
 
+        System.out.println(mostFrequent(names));
+        System.out.println(mostFrequent(names2));
+        System.out.println();
+        Collection<Integer> numbers2 = new ArrayList<>();
+        numbers2.add(2);
+        numbers2.add(1);
+        numbers2.add(2);
+        numbers2.add(3);
 
-            System.out.println();
-            Collection<Integer> numbers2 = new ArrayList<>();
-            numbers2.add(2);
-            numbers2.add(1);
-            numbers2.add(2);
-            numbers2.add(3);
+        Collection<Integer> numbers3 = new ArrayList<>();
+        numbers3.add(3);
+        numbers3.add(4);
+        numbers3.add(4);
+        numbers3.add(5);
 
-            Collection<Integer> numbers3 = new ArrayList<>();
-            numbers3.add(3);
-            numbers3.add(4);
-            numbers3.add(4);
-            numbers3.add(5);
-
-            System.out.println("Collection1 = " + numbers2);
-            System.out.println("Collection2 = " +numbers3);
-            System.out.println(inBoth(numbers2,numbers3));
-            System.out.println(inEither(numbers2,numbers));
-            System.out.println(containsDuplicates(numbers2));
+        System.out.println("Collection1 = " + numbers2);
+        System.out.println("Collection2 = " +numbers3);
+        System.out.println(inBoth(numbers2,numbers3));
+        System.out.println(inEither(numbers2,numbers));
+        System.out.println(containsDuplicates(numbers2));
 
 
-           removeSmallInts(b,15);
+       removeSmallInts(b,15);
     }
 
     /**
@@ -188,7 +193,7 @@ public class CollectionsAssignment {
         Map<String, Integer> map = new HashMap<>();
             String freq = "";
             Map.Entry<String, Integer> max = null;
-            
+
             if (list.isEmpty()) {
                 System.out.println("list is empty");
                 return freq;
@@ -236,12 +241,10 @@ public class CollectionsAssignment {
 
                 int maxValueInMap = (Collections.max(duplicate.values()));
                 System.out.println(maxValueInMap);
-                ;
-
-
-
+    
 
             }
+            System.out.println("String that contains max value = " + max.getKey());
             return max.getKey();
     }
 
