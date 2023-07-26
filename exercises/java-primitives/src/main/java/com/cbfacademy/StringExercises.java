@@ -1,10 +1,11 @@
 package com.cbfacademy;
 
 public class StringExercises {
+    
 
     public String fromCharacters(char[] characters) {
         // TODO - Write code that creates a String from the input array of characters
-        String newString = " ";
+        String newString ="";
             try {
                 // TODO: Write code that creates a String from the input array of characters
                // for(int i = 0 ; i < characters.length -1;i++){
@@ -37,7 +38,7 @@ public class StringExercises {
                     }
                     i++;
                 }
-                //throw new RuntimeException("Not implemented");
+                
             }catch (Exception e) {
                 e.printStackTrace();
                 System.out.println("Exception in method caught");
@@ -57,18 +58,15 @@ public class StringExercises {
         }else{
             try{
             for(int i = 0 ; i < word.length();i++){
-                //System.out.println(word.charAt(i));
+                
             }
             for(int j = word.length()-1 ; j >= 0;j--){
-               // System.out.println(word.charAt(j));
                 char fromString = word.charAt(j);
                 newWord += String.valueOf(fromString);
-                //System.out.println(newWord);
+                
             }
             System.out.println(word + " and " + newWord );
-            // String w = new String(word);
-            //String w2 = new String(newWord);
-            //System.out.println(word + " and " + newWord);
+            
             if(word.equalsIgnoreCase(newWord)){
                 System.out.println("The input word is a Palindrome");
                 flag = true;
@@ -92,10 +90,11 @@ public class StringExercises {
            // Date d = new Date();
            // System.out.println(d);
          // System.out.println();
-            System.out.println("\nThis is StringExercises class");
-            System.out.println(new StringExercises().isPalindrome("Madam"));
-            System.out.println(new StringExercises().howMany("hello", 'l'));
-            System.out.println(new StringExercises().fromCharacters(new char[]{'J','u','l','i','e', 't'}));
+            System.out.println(new StringExercises().fromCharacters(new char[]{'h', 'e', 'l', 'l', 'o'}));
+            //System.out.println("\nThis is StringExercises class");
+           // System.out.println(new StringExercises().isPalindrome("Madam"));
+           // System.out.println(new StringExercises().howMany("hello", 'l'));
+           // System.out.println(new StringExercises().fromCharacters(new char[]{'J','u','l','i','e', 't'}));
 
     }
 }
