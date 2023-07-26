@@ -1,6 +1,7 @@
 package com.cbfacademy;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -8,7 +9,28 @@ import java.util.Map;
 public class FlowControlExercises {
     public static void main(String[] args) {
         
+        //FlowControlExercises obj = new FlowControlExercises();
+        
+        //Integer[] a = new Integer[]{213, 54, 91, 187, 2001, 2023}; //output reads [Fizz, Fizz, 91, 187, Fizz, 2023];
+        //List<Integer> numbers = Arrays.asList(a);
+        //obj.fizzBuzz(numbers);
+
+    
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(213);
+        numbers.add(54); 
+        numbers.add(91);
+        numbers.add( 187);
+        numbers.add(2001);
+        numbers.add( 2023);
+
+        System.out.println(new FlowControlExercises().fizzBuzz(numbers));
+
+         //System.out.println(new FlowControlExercises().sumOfOddsAndSumOfEvens());
+         //System.out.println(new FlowControlExercises().whichMonth(6));
+
     }
+    
 
     public List<String> fizzBuzz(List<Integer> numbers) {
         // TODO - Implement this method such that
@@ -22,28 +44,24 @@ public class FlowControlExercises {
         List<Integer> newList = new ArrayList<>();
         List<String> anotherList = new ArrayList<>();
         newList.addAll(numbers);
-        System.out.println("newList = " + newList);
+
         for (int i = 0; i < newList.size(); i++) {
             try {
-                //System.out.println(newList.get(i));
+
                 if (newList.get(i) % 3 == 0 && newList.get(i) % 5 == 0) {
                     s = "FizzBuzz";
-                    // System.out.println("add new string");
                     anotherList.add(s);
                 } else if (newList.get(i) % 5 == 0) {
                     s = "Buzz";
-                    // System.out.println("add new string");
                     anotherList.add(s);
 
                 } else if (newList.get(i) % 3 == 0) {
                     s = "Fizz";
-                    //System.out.println("add new string");
                     anotherList.add(s);
 
                 } else {
                     int x = newList.get(i);
                     s = String.valueOf(x);
-                    //System.out.println("add new string");
                     anotherList.add(s);
                 }
 
@@ -51,9 +69,10 @@ public class FlowControlExercises {
                 e.printStackTrace();
             }
         }
-        
+
         System.out.println(anotherList);
         return anotherList;
+
     }
 
 
@@ -63,11 +82,11 @@ public class FlowControlExercises {
         //  - it returns the month corresponding to the input ${number}
         //  - if the ${number} is invalid, the method should return "Invalid month number"
 
-         int newNumber = number;
+         
         String month = "";
 
-        switch(newNumber){
-            case 1 : month = "January";
+        switch(number){
+            case 1 : month = "January";//or use println directly
                      break;
             case 2 : month = "February";
                 break;
@@ -97,7 +116,7 @@ public class FlowControlExercises {
         }
         System.out.println(month);
         return month;
-        //throw new RuntimeException("Not implemented");
+        
     }
 
     public Map<String, Integer> sumOfOddsAndSumOfEvens() {
@@ -133,7 +152,7 @@ public class FlowControlExercises {
         System.out.println(evenList);
         System.out.println(sumEven);
 
-        calculatedSumOfEvens =sumEven;
+        calculatedSumOfEvens = sumEven;
         calculatedSumOfOdds = sumOdd;
         map.put("SumOfEvens", calculatedSumOfEvens);
         map.put("SumOfOdds", calculatedSumOfOdds);
@@ -160,18 +179,13 @@ public class FlowControlExercises {
         System.out.println("anotherList = " + anotherList);
         List<Integer> newList = new ArrayList<>();//will hold the reverse array of copy
         numbers = new ArrayList<>();
-        //System.out.println(anotherList);
-//        for(Integer i : anotherList){
-//            System.out.println(i);
-//            newList.add(i);
-//        }
+       
         try{
             for (int i = anotherList.size() - 1; i >= 0; --i) {
-            //System.out.println("This is x");
              x = anotherList.get(i);
             newList.add(x);
             }
-       // throw new RuntimeException("Not implemented");
+      
         }catch(Exception e){
             e.printStackTrace();
         }
