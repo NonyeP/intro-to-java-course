@@ -102,10 +102,11 @@ public class CollectionsAssignment {
     public static boolean containsDuplicates(Collection<Integer> integers) {
         // Your solution must not use any loops.
         boolean flag = false;
-        System.out.println("Collection size = " + integers.size());
+        //System.out.println("Collection size = " + integers.size());
             Set<Integer> duplicates = new HashSet<>();
             duplicates.addAll(integers);
-            System.out.println("Set size = " + duplicates.size());
+           // System.out.println("Set size = " + duplicates.size());
+           System.out.println(duplicates.retainAll(integers));
             if (integers.size() > duplicates.size()) {
                 System.out.println("Collection contains duplicates.");
                 flag = true;
